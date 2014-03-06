@@ -1,0 +1,11 @@
+extends ../shared/template
+
+block content
+  //a.button(href='/') Cancel Login
+  h1
+  form#userControls
+    legend Register or Log In
+    input#userName(type='text', name='email', placeholder='email...', autofocus='true')
+    input#password(type='password', name='password', placeholder='password...')
+    button.alert#register Register
+    button#login Log In

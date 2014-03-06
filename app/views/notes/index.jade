@@ -1,0 +1,16 @@
+extends ../shared/template
+
+block content
+  button#createNote New Note
+  form#noteControls New Note
+    input#title(type='text', name='title', placeholder='Title...', autofocus='true')
+    textarea#body(type='text', name='body', placeholder='Content...')
+    input#tags(type='text', name='tags', placeholder='work, trip, todo...')
+    input#date(type='date', name='date')
+    button.tiny#newNote Create!
+  each note in notes
+    .notePanel(style='background-image:url("http://www.gaiahealingartscenter.com/Post-it-note-transparent.png")')
+      .title(val= note.userId)= note.title
+      .content(val= note.userId)= note.content
+      .tags(val= note.userId)= note.tags
+      .date= moment(note.title).format('MMMM Do, YYYY')
